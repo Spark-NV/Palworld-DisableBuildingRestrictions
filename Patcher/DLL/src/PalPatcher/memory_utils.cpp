@@ -1,0 +1,1 @@
+// This file is intentionally left blank since MemoryModification is just a struct

@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9592c696-7f58-4352-9b71-22223b526b77}</ProjectGuid>
-    <RootNamespace>PalPatcher</RootNamespace>
+    <ProjectGuid>{8f485748-4d49-4763-b356-728d6974eb85}</ProjectGuid>
+    <RootNamespace>Palpatcher</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,8 +110,10 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;PALPATCHER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -139,17 +141,36 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h" />
-    <ClInclude Include="pch.h" />
+    <ClInclude Include="delete_log_file.h" />
+    <ClInclude Include="display_message_box.h" />
+    <ClInclude Include="find_pattern.h" />
+    <ClInclude Include="force_close_process.h" />
+    <ClInclude Include="get_executable_path.h" />
+    <ClInclude Include="get_module_base_address.h" />
+    <ClInclude Include="get_module_size.h" />
+    <ClInclude Include="logging.h" />
+    <ClInclude Include="log_process_info.h" />
+    <ClInclude Include="memory_utils.h" />
+    <ClInclude Include="modify_memory.h" />
+    <ClInclude Include="patcher.h" />
+    <ClInclude Include="pattern_error_message_box.h" />
+    <ClInclude Include="pattern_not_found_force_close.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="delete_log_file.cpp" />
+    <ClCompile Include="display_message_box.cpp" />
+    <ClCompile Include="find_pattern.cpp" />
+    <ClCompile Include="force_close_process.cpp" />
+    <ClCompile Include="get_executable_path.cpp" />
+    <ClCompile Include="get_module_base_address.cpp" />
+    <ClCompile Include="get_module_size.cpp" />
+    <ClCompile Include="logging.cpp" />
+    <ClCompile Include="log_process_info.cpp" />
+    <ClCompile Include="memory_utils.cpp" />
+    <ClCompile Include="modify_memory.cpp" />
+    <ClCompile Include="patcher.cpp" />
+    <ClCompile Include="pattern_error_message_box.cpp" />
+    <ClCompile Include="pattern_not_found_force_close.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

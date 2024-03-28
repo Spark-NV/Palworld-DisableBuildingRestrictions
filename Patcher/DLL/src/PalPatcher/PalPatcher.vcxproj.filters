@@ -15,18 +15,90 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
+    <ClInclude Include="patcher.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pch.h">
+    <ClInclude Include="modify_memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="get_module_base_address.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="log_process_info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="force_close_process.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="display_message_box.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="get_executable_path.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="delete_log_file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="get_module_size.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pattern_error_message_box.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="find_pattern.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pattern_not_found_force_close.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="logging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory_utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp">
+    <ClCompile Include="patcher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
+    <ClCompile Include="get_module_base_address.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modify_memory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="log_process_info.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="force_close_process.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="display_message_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="get_executable_path.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="delete_log_file.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="get_module_size.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pattern_error_message_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="find_pattern.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pattern_not_found_force_close.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="logging.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="memory_utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
