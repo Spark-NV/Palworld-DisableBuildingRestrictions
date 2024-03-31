@@ -9,6 +9,7 @@ It also does not require an ini anymore since the directories are found automati
 
 
 
+CHOOSE 1 OF THESE METHODS ONLY.
 
 ** Palpatcher Downloader method: **
 
@@ -31,6 +32,17 @@ Option 9 will delete/uninstall the dll files from palworld and palserver(if pals
 This really doesnt need instructions? as you just download the exe and run it then choose an option.
 Each row has a "?" button which describes what that row's buttons functions kinda do.
 
+
+** DragNDrop EXE Patcher **
+
+This was really made for those on linux, this hopefully will support patching the executable on linux too as this script doesnt have any windows specific code. Hopefully this will allow those that host the server on a linux server to patch there executable.
+this doesnt mean it wont work for those on windows, it 100% works on windows and hopefully on linux(need a tester to report back)
+Use this by 1 of 2 methods:
+
+1. Drag and dropping the file onto the script.
+or
+2. Call the script in a terminal window with the file to be patched as an argument. IE: "python BuildPatcher.py /path/to/PalServer-Win64-Test-Cmd" 
+NOTE: it might be advised to patch both PalServer-Win64-Test-Cmd and PalServer-Win64-Test.
 
 
 
