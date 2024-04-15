@@ -1,48 +1,30 @@
 ** Important Note: **
-Using the mod/patch to remove support restrictions can be risky. If you build a base with the mod/patch applied and later accidentally run the game without it, your base will be destroyed. Be cautious and ensure the patch is always applied before loading your save/world.
-This is the reason the DLL method is prefered as it always attempts to patch the game at startup and if it fails you will know, where as the patcher version if the game updates and you didnt realize it you risk attempting to build something without the patches in place.
-
-
-With the latest release of this, I have made it so the locating of the steam installation and palworld/palserver installs are automatically found.
-it does this by reading the windows registry to find the steam install location, it then reads the manifest files within the steam folder to find the game install directories.
-It also does not require an ini anymore since the directories are found automatically
+As of V2.2 I removed the support restriction removal patch, this is due to me not having the time to find the new code in the new game update. I might attempt to find it at a later point but for now its removed.
 
 
 
 CHOOSE 1 OF THESE METHODS ONLY.
 
-** Palpatcher Downloader method: **
-
-just download the .bat file either from the nexusmods page or from the github repo and run it.
-Select the option you want to have downloaded/installed. 
-Option 1 will download and place the dll files into the proper directories for palworld and palserver(if you have palserver intalled).
-Option 2 will download the patcher exe to the desktop for you to execute.
-Option 9 will delete/uninstall the dll files from palworld and palserver(if palserver is installed)
-
-
-** Manual DLL install method **
+** DLL method **
 
 1. Download t4bby's DLL Loader: https://www.nexusmods.com/palworld/mods/372
 2. Read the Instructions to install t4bby's loader and create the Plugins folder as it says.
 3. Download PalPatcher.dll and place it in the Plugins folder you created.
 
-
-** Manual EXE Patcher **
-
-This really doesnt need instructions? as you just download the exe and run it then choose an option.
-Each row has a "?" button which describes what that row's buttons functions kinda do.
-
+Note: As far as I know you can also my dll using the dll loader functionality of UE4SS, but I cannot confirm that and will not offer support on how to do that as I havnt looked into it.
 
 ** DragNDrop EXE Patcher **
 
-This was really made for those on linux, this hopefully will support patching the executable on linux too as this script doesnt have any windows specific code. Hopefully this will allow those that host the server on a linux server to patch there executable.
-this doesnt mean it wont work for those on windows, it 100% works on windows and hopefully on linux(need a tester to report back)
+This hopefully will support patching the executable on linux(not tested) and windows.
+This script doesnt need to be placed anywhere specific, just do 1 of these 2 ways of executing it.
+
 Use this by 1 of 2 methods:
 
-1. Drag and dropping the file onto the script.
-or
+1. Drag and dropping the game executable file onto the script.( if just patching palworld, you only need to patch "Palworld-Win64-Shipping.exe", if your patching Palserver you need to do both executables "PalServer-Win64-Test-Cmd.exe" and "PalServer-Win64-Test.exe"
+
+OR
+
 2. Call the script in a terminal window with the file to be patched as an argument. IE: "python BuildPatcher.py /path/to/PalServer-Win64-Test-Cmd" 
-NOTE: it might be advised to patch both PalServer-Win64-Test-Cmd and PalServer-Win64-Test.
 
 
 
@@ -51,7 +33,7 @@ NOTE: it might be advised to patch both PalServer-Win64-Test-Cmd and PalServer-W
 1. **Difference from CactusPi3's files:**
    - Cactus's files edit the game's memory address after loading, while my patcher files apply mods/patches before the game launches.
 
-2. **Special file placement:**
+2. **DragNDrop special file placement:**
    - Run it from anywhere...
 
 3. **Recommended version and patch method:**
@@ -60,6 +42,15 @@ NOTE: it might be advised to patch both PalServer-Win64-Test-Cmd and PalServer-W
 4. **Do I need cheat engine or .CT files:**
    - No.
    
-5. **Do i need to run the patcher and use the dll:**
-   - No, only choose 1 method. Infact if you try to use them both the dll will not be able to find the bytes to patch as they were already patched using the patcher GUI
+5. **Do i need to use the exe patcher and use the dll:**
+   - No, only choose 1 method. Infact if you try to use them both the dll will not be able to find the bytes to patch as they were already patched using the exe patcher
+   
+6. **The DragNDrop file doesnt do anything!!**
+   - Did you install python and make sure to check the box on the bottom of the installer that said "add python to PATH"? If not you need to do that then the python script will be able to be launched/used
 
+7. **What happened to the GUI patcher, Downloader and the support restriction removal?
+   -Ok this has a few things,
+   
+      1. I removed support for the gui patcher as I feel the DragNdrop script is just as simple to use but doesnt require me trying to find the path to the executable. I also removed support for the downloader for the same reason, I made that to try making it easier for those that cant seem to figure out how to make a folder and put the dll into it. But as of right now I dont feel like maintaining multiple files.
+   
+      2. When the game updated to V0.2 they changed the way the support restriction check is performed, and as of the writing of this I dont have the time to try finding the new code. (and tbh I lost alot of my motivation as I dont really play the game that much right now until more content gets added.)

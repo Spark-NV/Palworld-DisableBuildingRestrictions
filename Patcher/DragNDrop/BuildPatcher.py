@@ -57,35 +57,32 @@ def create_backup(Fpath, install_folder, is_palworld, is_palserver, is_palserver
 
 def palserver(Fpath):
     patterns_and_patches = [
-        ("Allow Building Next To Palbox", "7415488B9EA8020000B2020FB64B30E8....0F00", "EB15"),
+        ("Allow Building Next To Palbox", "7415488B9EA8020000B2020FB64B30E8......0088", "EB15"),
         ("Allow Building In Air", "0F84..000000488D8DE0000000E8......00", "909090909090"),
         ("Overlapping Bases", "75..488B9F000100004863BF0801000048C1E7044803","9090"),
         ("Disable World Collision", "7407B0..E9..0100000FB60B85C90F84..01000083F9","EB07"),
         ("Allow Building On Water", "..0E0FB64E30B2..E8......008846304C8D9C2460020000","EB0E"),
-        ("Support Restriction Remove2", "7309C7432801000000EB35C74328000000004863DE8D7301","9090"),
     ]
     apply_modifications(Fpath, patterns_and_patches)
 
 def palserver_cmd(Fpath):
     patterns_and_patches = [
-        ("Allow Building Next To Palbox", "7415488B9EA8020000B2020FB64B30E8....0F00", "EB15"),
+        ("Allow Building Next To Palbox", "7415488B9EA8020000B2020FB64B30E8......0088", "EB15"),
         ("Allow Building In Air", "0F84..000000488D8DE0000000E8......00", "909090909090"),
         ("Overlapping Bases", "75..488B9F000100004863BF0801000048C1E7044803","9090"),
         ("Disable World Collision", "7407B0..E9..0100000FB60B85C90F84..01000083F9","EB07"),
         ("Allow Building On Water", "..0E0FB64E30B2..E8......008846304C8D9C2460020000","EB0E"),
-        ("Support Restriction Remove2", "7309C7432801000000EB35C74328000000004863DE8D7301","9090"),
     ]
     apply_modifications(Fpath, patterns_and_patches)
 
 def patch_palworld(Fpath):
     patterns_and_patches = [
-        ("Allow Building Next To Palbox", "7415488B9EA8020000B2020FB64B30E8....0F00", "EB15"),
+        ("Allow Building Next To Palbox", "7415488B9EA8020000B2020FB64B30E8......0088", "EB15"),
         ("Allow Building In Air", "0F84..000000488D8DE0000000E8......00", "909090909090"),
         ("Overlapping Bases", "75..488B9F000100004863BF0801000048C1E7044803","9090"),
         ("Disable World Collision", "7407B0..E9..0100000FB60B85C90F84..01000083F9","EB07"),
         ("Allow Building On Water", "..0E0FB64E30B2..E8......008846304C8D9C2460020000","EB0E"),
         ("Support Restriction Remove", "7E68488B4C24284885C97405E8......00488B4D..33DB","9090"),
-        ("Support Restriction Remove2", "7309C7432801000000EB35C74328000000004863DE8D7301","9090"),
     ]
     apply_modifications(Fpath, patterns_and_patches)
 
